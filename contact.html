@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task 1 Implement HTML,CSS,JS With bootstrap and materian design</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	
+	
+</head>
+<body>
+	<div class="container">
+
+		<!-- MENU ATAS / HEADER -->
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		  	<a class="navbar-brand" href="#">Training<b>Bootstrap</b></a>
+		  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		    	<span class="navbar-toggler-icon"></span>
+		  	</button>
+		  	<div class="collapse navbar-collapse" id="navbarNav">
+			    <ul class="navbar-nav ml-auto">
+			      	<li class="nav-item">
+			        	<a class="nav-link" href="home.html">Home</a>
+			      	</li>
+			      	<li class="nav-item">
+			        	<a class="nav-link" href="profile.html">Profile</a>
+			      	</li>
+			      	<li class="nav-item active">
+			        	<a class="nav-link" href="contact.html">Contact <span class="sr-only">(current)</span></a>
+			      	</li>
+			    </ul>
+		  	</div>
+		</nav>
+
+		<!-- ISI PROFILE -->
+		<div class="row" style="margin-top:20px">
+			<!-- NAMA DAN FOTO -->
+			<div class="col-sm-4">
+				<h1>Uray Jordi Lasardi</h1>
+				<img src="gambar/pp.jpg" style="border-radius:50%; max-width: 100px; max-height: 100px;">
+			</div>
+
+			<!-- FORM -->
+			<div class="col-sm-8">
+				<form method="POST">
+				  	<div class="form-group row">
+				    	<label class="col-sm-2 col-form-label">Email</label>
+					    <div class="col-sm-10">
+					      	<input type="email" class="form-control" id="email" placeholder="Email anda">
+					      	<p id="error_email"></p>
+					    </div>
+				  	</div>
+					<div class="form-group row">
+					    <label class="col-sm-2 col-form-label">Message</label>
+					    <div class="col-sm-10">
+						    <textarea class="form-control" id="pesan" placeholder="Pesan anda"></textarea>
+					    </div>
+					</div>
+				  
+					<div class="form-group row">
+					    <div class="col-sm-10">
+					     	<button type="button" onclick="cek()" class="btn btn-primary">Submit</button>
+					    </div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript">
+
+	function cek(){
+
+		var error="";
+		var email = document.getElementById( "email" );
+		if( email.value == "" ){
+			error = " Tolong isi email anda ";
+			document.getElementById( "error_email" ).innerHTML = error;
+			return false;
+		}
+	}
+</script>
+</html>
